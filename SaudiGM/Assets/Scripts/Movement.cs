@@ -43,15 +43,9 @@ public class Movement : MonoBehaviour
        }
 
        if(Input.GetKey(KeyCode.LeftShift) && !IsCrouching)
-       {
         CurrentSpeed = SprintingSpeed;
-        IsRuning = true;
-       }
        if(Input.GetKeyUp(KeyCode.LeftShift))
-       {
         CurrentSpeed = Speed;
-        IsRuning = false;
-       }
 
        if(Input.GetKey(KeyCode.LeftControl))
        StartCrouching();
