@@ -10676,7 +10676,7 @@ MonoBehaviour:
   GroundDrag: 6
   JumpForce: 20
   JumpRadius: 0.31
-  AirDrag: 1
+  AirDrag: 1.4
   GroundLayer:
     serializedVersion: 2
     m_Bits: 8
