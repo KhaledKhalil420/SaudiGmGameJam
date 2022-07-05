@@ -16,7 +16,7 @@ public class Movement : MonoBehaviour
     public Rigidbody Rb;
     Vector3 MoveDir;
     float SideWays, Forward, CurrentSpeed;
-    bool IsGrounded, IsWallAbove, IsCrouching, DoCrouchForce;
+    bool IsGrounded, IsWallAbove, IsCrouching, DoCrouchForce, IsRuning;
     private void Start()
     {
         Rb = GetComponent<Rigidbody>();
@@ -42,8 +42,16 @@ public class Movement : MonoBehaviour
             Jump(JumpForce);
        }
 
-       if(Input.GetKey(KeyCode.LeftShift) && !IsCrouching)CurrentSpeed = SprintingSpeed;
-       if(Input.GetKeyUp(KeyCode.LeftShift))CurrentSpeed = Speed;
+       if(Input.GetKey(KeyCode.LeftShift) && !IsCrouching)
+       {
+        CurrentSpeed = SprintingSpeed;
+        IsRuning = true;
+       }
+       if(Input.GetKeyUp(KeyCode.LeftShift))
+       {
+        CurrentSpeed = Speed;
+        IsRuning = false;
+       }
 
        if(Input.GetKey(KeyCode.LeftControl))
        StartCrouching();
