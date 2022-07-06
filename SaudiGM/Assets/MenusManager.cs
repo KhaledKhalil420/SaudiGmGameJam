@@ -28,4 +28,10 @@ public class MenusManager : MonoBehaviour
         startMenu.SetActive(false);
         settingsMenu.SetActive(true);
     }
+    public void CloseSettingsMenu()
+    {
+        tunnel.SetActive(true);
+        startMenu.SetActive(true);
+        settingsMenu.SetActive(false);
+    }
 }
