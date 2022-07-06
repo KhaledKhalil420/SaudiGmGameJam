@@ -4,6 +4,7 @@ using System;
 
 public class AudioManager : MonoBehaviour
 {
+    
     public Sound[] Sounds;
 
     public static AudioManager Instance;
@@ -55,6 +56,7 @@ public class AudioManager : MonoBehaviour
 
     public void ChangeAllSounds(float V)
     {
+        
         foreach(Sound S in Sounds)
         {
             S.Source.volume = V;

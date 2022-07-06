@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class MainMenuManager : MonoBehaviour
+public class LevelChanger : MonoBehaviour
 {
     public Animator animator;
     public string startingScene;
