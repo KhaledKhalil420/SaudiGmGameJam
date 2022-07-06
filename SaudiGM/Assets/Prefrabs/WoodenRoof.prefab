@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 6908789362767758075}
   - component: {fileID: 6541974830572612073}
   - component: {fileID: 5423642305635753431}
-  m_Layer: 0
+  - component: {fileID: 251550769006641388}
+  m_Layer: 3
   m_Name: WoodenRoof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6908789362767758075
 Transform:
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &251550769006641388
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7170041157470816179}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -462981019419857548, guid: d53532b3ad9a0eb4f87dae042d2f49d1, type: 3}
