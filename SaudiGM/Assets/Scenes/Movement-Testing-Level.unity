@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 3a0e7ff1338b8e44f8262eafa9983a00, type: 2}
+  m_LightingDataAsset: {fileID: 0}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 045290332ce59554b9665db3cda2fe1a, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -991,6 +991,7 @@ MonoBehaviour:
   DeathRoom1: 
   DeathRoom2: 
   DeathRoom3: 
+  Anim: {fileID: 0}
 --- !u!114 &773527092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12054,6 +12055,7 @@ MonoBehaviour:
   TargetPosition: {fileID: 1000195561}
   TargetRotation: {fileID: 963194228}
   RotationOffset: {x: -0.708919, y: 0.00000006181703, z: 0.00000006181703, w: 0.70528996}
+  PositionOffset: {x: 0, y: 0, z: 0}
   Smoothness: 5
 --- !u!1 &1565258259
 GameObject:
@@ -12109,6 +12111,7 @@ MonoBehaviour:
   Speed: 75
   SprintingSpeed: 100
   GroundDrag: 6
+  CurrentSpeed: 0
   JumpForce: 20
   JumpRadius: 0.31
   AirDrag: 1.4
