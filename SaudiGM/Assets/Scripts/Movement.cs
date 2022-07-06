@@ -5,7 +5,7 @@ public class Movement : MonoBehaviour
     public Transform GroundCheck, Head;
     Transform MainCa;
 
-    public float Speed, SprintingSpeed, GroundDrag;
+    public float Speed, SprintingSpeed, GroundDrag, CurrentSpeed;
 
     public float JumpForce, JumpRadius, AirDrag;
     public LayerMask GroundLayer;
@@ -15,7 +15,7 @@ public class Movement : MonoBehaviour
     [HideInInspector]
     public Rigidbody Rb;
     Vector3 MoveDir;
-    float SideWays, Forward, CurrentSpeed;
+    float SideWays, Forward;
     bool IsGrounded, IsWallAbove, IsCrouching, DoCrouchForce, IsRuning;
     private void Start()
     {
