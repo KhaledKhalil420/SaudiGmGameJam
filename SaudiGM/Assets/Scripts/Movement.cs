@@ -3,7 +3,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public Transform GroundCheck, Head;
-    Transform MainCa;
+    public Transform MainCa;
 
     public float Speed, SprintingSpeed, GroundDrag, CurrentSpeed, CounterMovementDrag;
 

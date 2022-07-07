@@ -45,9 +45,7 @@ public class sceneManager : MonoBehaviour
     }
     IEnumerator NextLevelT()
     {
-        yield return new WaitForSeconds(0.1f);
         //Make a Trigger and Call It Fade
-        Anim.SetTrigger("Fade");
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
