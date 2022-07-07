@@ -3,9 +3,9 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public Transform GroundCheck, Head;
-    Transform MainCa;
+    public Transform MainCa;
 
-    public float Speed, SprintingSpeed, GroundDrag, CurrentSpeed;
+    public float Speed, SprintingSpeed, GroundDrag, CurrentSpeed, CounterMovementDrag;
 
     public float JumpForce, JumpRadius, AirDrag;
     public LayerMask GroundLayer;
@@ -29,6 +29,13 @@ public class Movement : MonoBehaviour
        Inputs();
        ControlDrag();
        RayCasts();
+       CounterMovement();
+    }
+
+    void CounterMovement()
+    {
+        if(Input.GetButtonUp("Horizontal") || Input.GetButtonUp("Vertical"))
+        Rb.drag = CounterMovementDrag;
     }
 
     void Inputs()
