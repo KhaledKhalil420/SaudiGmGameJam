@@ -34,7 +34,7 @@ public class Movement : MonoBehaviour
 
     void CounterMovement()
     {
-        if(Input.GetButtonUp("Horizontal") || Input.GetButtonUp("Vertical"))
+        if(Input.GetButtonUp("Horizontal") && IsGrounded || Input.GetButtonUp("Vertical") && IsGrounded)
         Rb.drag = CounterMovementDrag;
     }
 
