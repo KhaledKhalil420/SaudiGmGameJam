@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SettingsSign : MonoBehaviour
 {
+    public MenuSounds sound;
     public MainMenuCam cam;
     public Animator animator;
     private void OnMouseUpAsButton()
@@ -13,5 +14,6 @@ public class SettingsSign : MonoBehaviour
         else if (animator.GetBool("SetIsOpen") == true)
             animator.SetBool("SetIsOpen", false);
         cam.MoveRight();
+        sound.Punch();
     }
 }
