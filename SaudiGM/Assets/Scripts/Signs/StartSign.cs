@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class StartSign : MonoBehaviour
 {
+    public MenuSounds sound;
     public MainMenuCam cam;
     public Animator animator;
     private void OnMouseUpAsButton()
@@ -12,5 +13,8 @@ public class StartSign : MonoBehaviour
         //SceneManager.LoadScene(1, LoadSceneMode.Single);
         animator.SetTrigger("GameStarted");
         cam.Zoom();
+        sound.Drag();
+        sound.Punch();
+
     }
 }

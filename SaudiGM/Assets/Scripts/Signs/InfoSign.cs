@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class InfoSign : MonoBehaviour
 {
+    public MenuSounds sound;
+
     public MainMenuCam cam;
     public Animator animator;
     private void OnMouseUpAsButton()
@@ -13,5 +15,7 @@ public class InfoSign : MonoBehaviour
         else if (animator.GetBool("InfoIsOpen") == true)
             animator.SetBool("InfoIsOpen", false);
         cam.MoveLeft();
+        sound.Punch();
+
     }
 }
