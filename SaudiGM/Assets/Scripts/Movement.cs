@@ -2,15 +2,15 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public Transform GroundCheck, Head;
-    public Transform MainCa;
+    [SerializeField] Transform GroundCheck, Head;
+    [SerializeField] Transform MainCa;
 
     public float Speed, SprintingSpeed, GroundDrag, CurrentSpeed, CounterMovementDrag;
+    
+    [SerializeField] float JumpForce, JumpRadius, AirDrag;
+    [SerializeField] LayerMask GroundLayer;
 
-    public float JumpForce, JumpRadius, AirDrag;
-    public LayerMask GroundLayer;
-
-    public float CrouchingForce, CrouchingDrag, CrouchingSpeed, HeadSize;
+    [SerializeField] float CrouchingForce, CrouchingDrag, CrouchingSpeed, HeadSize;
 
     [HideInInspector]
     public Rigidbody Rb;
@@ -34,7 +34,7 @@ public class Movement : MonoBehaviour
 
     void CounterMovement()
     {
-        if(Input.GetButtonUp("Horizontal") || Input.GetButtonUp("Vertical"))
+        if(Input.GetButtonUp("Horizontal") && IsGrounded || Input.GetButtonUp("Vertical") && IsGrounded)
         Rb.drag = CounterMovementDrag;
     }
 
