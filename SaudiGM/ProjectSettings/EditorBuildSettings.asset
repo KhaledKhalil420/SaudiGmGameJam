@@ -12,9 +12,18 @@ EditorBuildSettings:
     path: Assets/Scenes/AfterDeath-1.unity
     guid: 30ba4bd569ae84240a883ce879e4cec2
   - enabled: 1
+    path: Assets/Scenes/AfterDeath-2.unity
+    guid: 410625163b1825f4e996facb87cf1406
+  - enabled: 1
     path: Assets/Scenes/Tutorial Level.unity
     guid: f8ead8391b684334f9dac63febb7ffe1
   - enabled: 1
     path: Assets/Scenes/Level-1.unity
     guid: 89dc1a99016916c4194968046b2f5ded
+  - enabled: 1
+    path: Assets/Scenes/Level-2.unity
+    guid: 1c644199cf1517a449b6f55e1f0c2509
+  - enabled: 1
+    path: Assets/Scenes/Level-3.unity
+    guid: 8f4447fd696a62742b89c1540f87847e
   m_configObjects: {}

@@ -11,6 +11,7 @@ public class Booster : MonoBehaviour
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>().CurrentSpeed = 250;
             FindObjectOfType<Movement>().HasJumpAbility = true;
+            FindObjectOfType<Movement>().CanRun = false;
         }
     }
 
@@ -24,6 +25,7 @@ public class Booster : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
+            FindObjectOfType<Movement>().CanRun = true;
             StartCoroutine(AbilityToJumpAfter());
             GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>().CurrentSpeed = GameObject.FindGameObjectWithTag("Player").GetComponent<Movement>().Speed;
         }

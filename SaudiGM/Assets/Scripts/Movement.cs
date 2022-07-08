@@ -16,13 +16,14 @@ public class Movement : MonoBehaviour
     public Rigidbody Rb;
     Vector3 MoveDir;
     float SideWays, Forward;
-    bool IsWallAbove, IsCrouching, DoCrouchForce, IsRuning, IsGrounded, IsMoving;
-    public bool HasJumpAbility;
+    bool IsWallAbove, IsCrouching, DoCrouchForce, IsGrounded, IsMoving;
+    public bool HasJumpAbility, CanRun;
     private void Start()
     {
         Rb = GetComponent<Rigidbody>();
         CurrentSpeed = Speed;
         MainCa = GameObject.FindGameObjectWithTag("MainCamera").transform;
+        CanRun = true;
     }
 
     private void Update()
@@ -61,23 +62,23 @@ public class Movement : MonoBehaviour
             HasJumpAbility = false;
        }
 
-       if(Input.GetKey(KeyCode.LeftShift) && !IsCrouching)
+       if(Input.GetKey(KeyCode.LeftShift) && !IsCrouching && CanRun)
         CurrentSpeed = SprintingSpeed;
        if(Input.GetKeyUp(KeyCode.LeftShift))
         CurrentSpeed = Speed;
 
-       if(Input.GetKey(KeyCode.LeftControl))
+       if(Input.GetKey(KeyCode.C))
        StartCrouching();
-       if(!Input.GetKey(KeyCode.LeftControl) && !IsWallAbove)
+       if(!Input.GetKey(KeyCode.C) && !IsWallAbove)
        StopCrouching();
-       if(Input.GetKeyUp(KeyCode.LeftControl) && !IsWallAbove)
+       if(Input.GetKeyUp(KeyCode.C) && !IsWallAbove)
        StopCrouching();
-       if(Input.GetKeyDown(KeyCode.LeftControl) && !IsWallAbove && IsGrounded)
+       if(Input.GetKeyDown(KeyCode.C) && !IsWallAbove && IsGrounded)
        {
         StartCrouching();
         Rb.AddForce(transform.forward * CrouchingForce, ForceMode.Force);
        }
-       if(Input.GetKeyDown(KeyCode.LeftControl) && !IsWallAbove && !IsGrounded)
+       if(Input.GetKeyDown(KeyCode.C) && !IsWallAbove && !IsGrounded)
        {
         StartCrouching();
         DoCrouchForce = true;
