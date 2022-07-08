@@ -16,7 +16,8 @@ public class Movement : MonoBehaviour
     public Rigidbody Rb;
     Vector3 MoveDir;
     float SideWays, Forward;
-    bool IsGrounded, IsWallAbove, IsCrouching, DoCrouchForce, IsRuning;
+    bool IsWallAbove, IsCrouching, DoCrouchForce, IsRuning, IsGrounded, IsMoving;
+    public bool HasJumpAbility;
     private void Start()
     {
         Rb = GetComponent<Rigidbody>();
@@ -44,9 +45,20 @@ public class Movement : MonoBehaviour
        Forward = Input.GetAxisRaw("Vertical");
        MoveDir = transform.right * SideWays + transform.forward * Forward;
 
+       if(SideWays != 0 || Forward != 0)
+       IsMoving = true;
+       else
+       IsMoving = false;
+
        if(Input.GetKeyDown(KeyCode.Space) && IsGrounded)
        {
             Jump(JumpForce);
+       }
+
+       if(Input.GetKeyDown(KeyCode.Space) && HasJumpAbility && IsMoving)
+       {
+            Jump(JumpForce);
+            HasJumpAbility = false;
        }
 
        if(Input.GetKey(KeyCode.LeftShift) && !IsCrouching)
