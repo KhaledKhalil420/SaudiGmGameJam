@@ -15,6 +15,11 @@ public class StartSign : MonoBehaviour
         cam.Zoom();
         sound.Drag();
         sound.Punch();
-
+        StartCoroutine(StartGame());
+    }
+    IEnumerator StartGame()
+    {
+        yield return new WaitForSeconds(0.4f);
+        SceneManager.LoadScene("Tutorial Level");
     }
 }

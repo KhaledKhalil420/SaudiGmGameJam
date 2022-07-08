@@ -1391,6 +1391,7 @@ MonoBehaviour:
   CrouchingSpeed: 20
   HeadSize: 0.3
   Rb: {fileID: 423079932}
+  HasJumpAbility: 0
 --- !u!136 &423079934
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -17572,26 +17573,27 @@ MonoBehaviour:
     Clip: {fileID: 8300000, guid: b347ab59545287b47828b49e87338538, type: 3}
     Loop: 1
     PlayOnAwake: 1
-    Volume: 0.076
+    Volume: 1
     Source: {fileID: 0}
   - name: Music
     Clip: {fileID: 8300000, guid: 53a79e36655dee3439da8699d8124fb9, type: 3}
     Loop: 1
     PlayOnAwake: 1
-    Volume: 0.2
+    Volume: 1
     Source: {fileID: 0}
   - name: DeathEffect
     Clip: {fileID: 8300000, guid: 0979682a2d307d440b9d4ee2cbced4ff, type: 3}
     Loop: 0
     PlayOnAwake: 0
-    Volume: 0.2
+    Volume: 1
     Source: {fileID: 0}
   - name: FadeSound
     Clip: {fileID: 8300000, guid: 7a7feb6d135ad1a4c827b154f25a8763, type: 3}
     Loop: 0
     PlayOnAwake: 0
-    Volume: 0.2
+    Volume: 1
     Source: {fileID: 0}
+  Output: {fileID: 24300002, guid: 64feeca6940b52f428b2338dfd561b1c, type: 2}
 --- !u!4 &1125178632
 Transform:
   m_ObjectHideFlags: 0
