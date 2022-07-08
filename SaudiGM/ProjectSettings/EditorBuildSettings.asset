@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 6e080d924ee7ec9428c6e51247914806
   - enabled: 1
+    path: Assets/Scenes/AfterDeath-1.unity
+    guid: 30ba4bd569ae84240a883ce879e4cec2
+  - enabled: 1
     path: Assets/Scenes/Tutorial Level.unity
     guid: f8ead8391b684334f9dac63febb7ffe1
   - enabled: 1
