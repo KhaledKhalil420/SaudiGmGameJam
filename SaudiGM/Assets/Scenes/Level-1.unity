@@ -1012,7 +1012,7 @@ MonoBehaviour:
   CurrentSpeed: 0
   CounterMovementDrag: 20
   JumpForce: 20
-  JumpRadius: 0.31
+  JumpRadius: 0.4
   AirDrag: 1.4
   GroundLayer:
     serializedVersion: 2
@@ -1111,7 +1111,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh135024
+  m_Name: pb_Mesh44478
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6823,6 +6823,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LoadNextLevel: 0
   Death: 0
+  DeadBody: 0
+  CurrentLevelName: 
   Anim: {fileID: 0}
 --- !u!114 &541227675
 MonoBehaviour:
@@ -7641,10 +7643,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a25d90d87acbf4e9a014ccfdcb8710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DeathRoom1: 
-  DeathRoom2: 
-  DeathRoom3: 
-  Anim: {fileID: 0}
+  DeathRoom: AfterDeath-1
+  Anim: {fileID: 541227673}
 --- !u!4 &938304161
 Transform:
   m_ObjectHideFlags: 0
@@ -9367,6 +9367,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chest
       objectReference: {fileID: 0}
+    - target: {fileID: 2934815783814508797, guid: 6040ae41d67bb6a40ba596cbe0da37e1, type: 3}
+      propertyPath: Anim
+      value: 
+      objectReference: {fileID: 541227673}
     - target: {fileID: 2934815783814508799, guid: 6040ae41d67bb6a40ba596cbe0da37e1, type: 3}
       propertyPath: m_RootOrder
       value: 3

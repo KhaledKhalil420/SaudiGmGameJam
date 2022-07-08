@@ -1,10 +1,11 @@
 using System.Collections;
-using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class Trigger : MonoBehaviour
 {
-    public bool LoadNextLevel, Death;
+    public bool LoadNextLevel, Death, DeadBody;
+    public string CurrentLevelName;
     public Animator Anim;
 
     private void OnTriggerEnter(Collider other)
@@ -13,6 +14,8 @@ public class Trigger : MonoBehaviour
         StartCoroutine(FadeIn());
         if(other.gameObject.CompareTag("Player") && Death)
         FindObjectOfType<sceneManager>().LoadRandomDeathRoom();
+        if(other.gameObject.CompareTag("Player") && DeadBody)
+        StartCoroutine(FadeIn1());
     }
     IEnumerator FadeIn()
     {
@@ -20,6 +23,13 @@ public class Trigger : MonoBehaviour
         FindObjectOfType<Movement>().enabled = false;
         yield return new WaitForSeconds(1);
         FindObjectOfType<sceneManager>().LoadNextLevel();
+    }
+    IEnumerator FadeIn1()
+    {
+        Anim.SetTrigger("FadeIn");
+        FindObjectOfType<Movement>().enabled = false;
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(CurrentLevelName);
     }
 
     public void PlaySound()

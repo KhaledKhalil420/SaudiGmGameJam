@@ -6,6 +6,7 @@ public class AudioManager : MonoBehaviour
 {
     
     public Sound[] Sounds;
+    public AudioMixerGroup Output;
 
     public static AudioManager Instance;
     void Awake() 
@@ -28,6 +29,7 @@ public class AudioManager : MonoBehaviour
             S.Source.clip = S.Clip;
             S.Source.loop = S.Loop;
             S.Source.playOnAwake = S.PlayOnAwake;
+            S.Source.outputAudioMixerGroup = Output;
         }
         foreach(Sound S in Sounds)
         {
