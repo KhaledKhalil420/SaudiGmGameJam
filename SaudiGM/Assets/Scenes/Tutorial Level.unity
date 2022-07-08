@@ -1372,7 +1372,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GroundCheck: {fileID: 494467077}
   Head: {fileID: 555707251}
-  MainCa: {fileID: 0}
+  MainCa: {fileID: 1454985276}
   Speed: 50
   SprintingSpeed: 75
   GroundDrag: 6

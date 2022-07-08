@@ -1111,7 +1111,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh92274
+  m_Name: pb_Mesh135024
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2171,7 +2171,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 0.03529412}
+      maxColor: {r: 1, g: 1, b: 1, a: 0.16862746}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -9372,12 +9372,24 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2934815783814508799, guid: 6040ae41d67bb6a40ba596cbe0da37e1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2934815783814508799, guid: 6040ae41d67bb6a40ba596cbe0da37e1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2934815783814508799, guid: 6040ae41d67bb6a40ba596cbe0da37e1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2934815783814508799, guid: 6040ae41d67bb6a40ba596cbe0da37e1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.300764
       objectReference: {fileID: 0}
     - target: {fileID: 2934815783814508799, guid: 6040ae41d67bb6a40ba596cbe0da37e1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.8634615
+      value: -6.24
       objectReference: {fileID: 0}
     - target: {fileID: 2934815783814508799, guid: 6040ae41d67bb6a40ba596cbe0da37e1, type: 3}
       propertyPath: m_LocalPosition.z
