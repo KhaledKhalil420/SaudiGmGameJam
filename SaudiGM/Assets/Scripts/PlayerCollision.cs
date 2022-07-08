@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour
 {
-    /// <summary>
-    /// OnCollisionEnter is called when this collider/rigidbody has begun
-    /// touching another rigidbody/collider.
-    /// </summary>
-    /// <param name="other">The Collision data associated with this collision.</param>
+    public bool IsInDeathRealm;
     private void OnCollisionEnter(Collision other)
     {
-        if(other.collider.CompareTag("Damage"))
+        if(other.collider.CompareTag("Damage") && !IsInDeathRealm)
         {
             FindObjectOfType<sceneManager>().LoadRandomDeathRoom();
+            GetComponent<Movement>().enabled = false;
+            FindObjectOfType<CamLook>().enabled = false;
+            transform.localScale = new(1, 0.5f, 1);
+        }
+        if(other.collider.CompareTag("Damage") && IsInDeathRealm)
+        {
+            FindObjectOfType<sceneManager>().Restart();
             GetComponent<Movement>().enabled = false;
             FindObjectOfType<CamLook>().enabled = false;
             transform.localScale = new(1, 0.5f, 1);

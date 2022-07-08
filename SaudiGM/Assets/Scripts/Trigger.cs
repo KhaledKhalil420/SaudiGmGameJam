@@ -13,7 +13,7 @@ public class Trigger : MonoBehaviour
         if(other.gameObject.CompareTag("Player") && LoadNextLevel)
         StartCoroutine(FadeIn());
         if(other.gameObject.CompareTag("Player") && Death)
-        FindObjectOfType<sceneManager>().LoadRandomDeathRoom();
+        StartCoroutine(FadeIn2());
         if(other.gameObject.CompareTag("Player") && DeadBody)
         StartCoroutine(FadeIn1());
     }
@@ -23,6 +23,13 @@ public class Trigger : MonoBehaviour
         FindObjectOfType<Movement>().enabled = false;
         yield return new WaitForSeconds(1);
         FindObjectOfType<sceneManager>().LoadNextLevel();
+    }
+    IEnumerator FadeIn2()
+    {
+        Anim.SetTrigger("FadeIn");
+        FindObjectOfType<Movement>().enabled = false;
+        yield return new WaitForSeconds(1);
+        FindObjectOfType<sceneManager>().Restart();
     }
     IEnumerator FadeIn1()
     {

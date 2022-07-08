@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1538818824916432969
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1538818824916432971}
+  - component: {fileID: 1538818824916432968}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1538818824916432971
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1538818824916432969}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.0263305, y: -0.7642925, z: 10.475483}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1538818824916432968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1538818824916432969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af56c37d2ce19294991efcae14d3fc1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sounds:
+  - name: Ambient
+    Clip: {fileID: 8300000, guid: b347ab59545287b47828b49e87338538, type: 3}
+    Loop: 1
+    PlayOnAwake: 1
+    Volume: 0.076
+    Source: {fileID: 0}
+  - name: Music
+    Clip: {fileID: 8300000, guid: 3fb3587deaadf0e469d7adb495dad8b1, type: 3}
+    Loop: 1
+    PlayOnAwake: 1
+    Volume: 0.2
+    Source: {fileID: 0}
+  - name: DeathEffect
+    Clip: {fileID: 8300000, guid: 0979682a2d307d440b9d4ee2cbced4ff, type: 3}
+    Loop: 0
+    PlayOnAwake: 0
+    Volume: 0.2
+    Source: {fileID: 0}
+  - name: FadeSound
+    Clip: {fileID: 8300000, guid: 7a7feb6d135ad1a4c827b154f25a8763, type: 3}
+    Loop: 0
+    PlayOnAwake: 0
+    Volume: 0.2
+    Source: {fileID: 0}
+  Output: {fileID: 24300002, guid: 64feeca6940b52f428b2338dfd561b1c, type: 2}

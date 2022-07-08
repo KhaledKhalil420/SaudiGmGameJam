@@ -24,8 +24,12 @@ public class sceneManager : MonoBehaviour
         //Remove After Realese
         if(Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Restart();
         }
+    }
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     IEnumerator ChoseRandomLevel()
     {

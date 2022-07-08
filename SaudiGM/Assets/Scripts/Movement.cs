@@ -67,13 +67,13 @@ public class Movement : MonoBehaviour
        if(Input.GetKeyUp(KeyCode.LeftShift))
         CurrentSpeed = Speed;
 
-       if(Input.GetKey(KeyCode.C))
+       if(Input.GetKey(KeyCode.LeftControl))
        StartCrouching();
-       if(!Input.GetKey(KeyCode.C) && !IsWallAbove)
+       if(!Input.GetKey(KeyCode.LeftControl) && !IsWallAbove)
        StopCrouching();
-       if(Input.GetKeyUp(KeyCode.C) && !IsWallAbove)
+       if(Input.GetKeyUp(KeyCode.LeftControl) && !IsWallAbove)
        StopCrouching();
-       if(Input.GetKeyDown(KeyCode.C) && !IsWallAbove && IsGrounded)
+       if(Input.GetKeyDown(KeyCode.LeftControl) && !IsWallAbove && IsGrounded)
        {
         StartCrouching();
         Rb.AddForce(transform.forward * CrouchingForce, ForceMode.Force);
