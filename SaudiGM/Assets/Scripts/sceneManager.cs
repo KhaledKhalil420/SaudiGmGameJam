@@ -19,14 +19,6 @@ public class sceneManager : MonoBehaviour
         StartCoroutine(ChoseRandomLevel());
     }
 
-    void Update()
-    {
-        //Remove After Realese
-        if(Input.GetKeyDown(KeyCode.R))
-        {
-            Restart();
-        }
-    }
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);

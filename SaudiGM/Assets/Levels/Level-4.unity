@@ -1879,6 +1879,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chest
       objectReference: {fileID: 0}
+    - target: {fileID: 2934815783814508797, guid: 6040ae41d67bb6a40ba596cbe0da37e1, type: 3}
+      propertyPath: Anim
+      value: 
+      objectReference: {fileID: 1845793088}
     - target: {fileID: 2934815783814508799, guid: 6040ae41d67bb6a40ba596cbe0da37e1, type: 3}
       propertyPath: m_RootOrder
       value: 44
@@ -28235,7 +28239,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh127892
+  m_Name: pb_Mesh111920
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

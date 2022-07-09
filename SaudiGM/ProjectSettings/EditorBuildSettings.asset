@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Levels/AfterDeath-4.unity
     guid: 3ebec9b894bdf3243a85d08d2322a60e
   - enabled: 1
+    path: Assets/Levels/AfterDeath-5.unity
+    guid: 88a16d7efdf1829438480793b6700281
+  - enabled: 1
     path: Assets/Levels/Tutorial Level.unity
     guid: f8ead8391b684334f9dac63febb7ffe1
   - enabled: 1
@@ -35,4 +38,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levels/Level-4.unity
     guid: 588ca163073f70947859578f69fd235c
+  - enabled: 1
+    path: Assets/Levels/Level-5.unity
+    guid: 7015710e28920c548807f79dcc2b4295
+  - enabled: 1
+    path: Assets/Levels/EndCredits.unity
+    guid: d3ec6df1137871645b83e707c80d869d
   m_configObjects: {}
